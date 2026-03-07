@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Interfaz LLM</title>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+  <main class="container">
+    <header class="header">
+      <h1>Asistente</h1>
+      <p class="subtitle">Pregunta al modelo y recibe respuestas claras y rápidas</p>
+    </header>
+
+    <section class="card">
+      <form id="llm-form" class="form">
+        <label for="prompt" class="label">Escribe tu pregunta</label>
+        <textarea id="prompt" name="prompt" rows="5" placeholder="¿Cómo puedo mejorar mi aplicación?" required></textarea>
+        <div class="controls">
+          <button id="submit-btn" type="submit" class="btn">Enviar</button>
+          <div id="status" class="status" aria-live="polite"></div>
+        </div>
+      </form>
+    </section>
+
+    <section class="card response-card">
+      <h2 class="response-title">Respuesta</h2>
+      <pre id="response" class="response-content">—</pre>
+    </section>
+
+    <footer class="footer">Servidor local: <a href="/">Inicio</a></footer>
+  </main>
+
+  <script src="/static/script.js"></script>
+</body>
+</html>
